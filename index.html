@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <main>
+        <section>
+            <div class="mode">
+                <button class="light-mode-btn" aria-label="Light mode">
+                    <svg style="width:24px;height:24px" viewBox="0 0 24 24" aria-label="hidden" class="light-mode">
+                        <path fill="currentColor" d="M3.55 19.09L4.96 20.5L6.76 18.71L5.34 17.29M12 6C8.69 6 6 8.69 6 12S8.69 18 12 18 18 15.31 18 12C18 8.68 15.31 6 12 6M20 13H23V11H20M17.24 18.71L19.04 20.5L20.45 19.09L18.66 17.29M20.45 5L19.04 3.6L17.24 5.39L18.66 6.81M13 1H11V4H13M6.76 5.39L4.96 3.6L3.55 5L5.34 6.81L6.76 5.39M1 13H4V11H1M13 20H11V23H13" />
+                    </svg>
+                </button>
+                <button class="dark-mode-btn" aria-label="Dark mode">
+                    <svg style="width:24px;height:24px" viewBox="0 0 24 24" aria-label="hidden" class="dark">
+                        <path fill="currentColor" d="M2 12A10 10 0 0 0 15 21.54A10 10 0 0 1 15 2.46A10 10 0 0 0 2 12Z" />
+                    </svg>
+                </button>
+            </div>
+        </section>
+        <section class="calculator">
+            <div class="input-container">
+                <div class="input">
+                    <p>0</p>
+                    <p class="answer"></p>
+                </div>
+            </div>
+            <div class="btn-container">
+                <div class="calculator-btn">
+                    <button class="clear" data-btn="C">
+                        <svg style="width:30px;height:30px" viewBox="0 0 24 24">
+                            <path fill="currentColor" d="M11,7A2,2 0 0,0 9,9V15A2,2 0 0,0 11,17H13A2,2 0 0,0 15,15V14H13V15H11V9H13V10H15V9A2,2 0 0,0 13,7H11Z" />
+                        </svg>
+                    </button>
+                    <button class="remainder" data-operator="%">
+                        <svg style="width:30px;height:30px" viewBox="0 0 24 24" aria-label="hidden">
+                            <path fill="currentColor" d="M18.5 3.5L20.5 5.5L5.5 20.5L3.5 18.5L18.5 3.5M7 4C8.66 4 10 5.34 10 7C10 8.66 8.66 10 7 10C5.34 10 4 8.66 4 7C4 5.34 5.34 4 7 4M17 14C18.66 14 20 15.34 20 17C20 18.66 18.66 20 17 20C15.34 20 14 18.66 14 17C14 15.34 15.34 14 17 14M7 6C6.45 6 6 6.45 6 7C6 7.55 6.45 8 7 8C7.55 8 8 7.55 8 7C8 6.45 7.55 6 7 6M17 16C16.45 16 16 16.45 16 17C16 17.55 16.45 18 17 18C17.55 18 18 17.55 18 17C18 16.45 17.55 16 17 16Z" />
+                        </svg>
+                    </button>
+                    <button class="del">
+                        <svg style="width:30px;height:30px" viewBox="0 0 24 24" aria-label="hidden">
+                            <path fill="currentColor" d="M19,15.59L17.59,17L14,13.41L10.41,17L9,15.59L12.59,12L9,8.41L10.41,7L14,10.59L17.59,7L19,8.41L15.41,12L19,15.59M22,3A2,2 0 0,1 24,5V19A2,2 0 0,1 22,21H7C6.31,21 5.77,20.64 5.41,20.11L0,12L5.41,3.88C5.77,3.35 6.31,3 7,3H22M22,5H7L2.28,12L7,19H22V5Z" />
+                        </svg>
+                    </button>
+                    <button class="multiply" data-operator="x">
+                        <svg style="width:30px;height:30px" viewBox="0 0 24 24" aria-label="hidden">
+                            <path fill="currentColor" class="red" d="M19,6.41L17.59,5L12,10.59L6.41,5L5,6.41L10.59,12L5,17.59L6.41,19L12,13.41L17.59,19L19,17.59L13.41,12L19,6.41Z" />
+                        </svg>
+                    </button>
+                    <button class="seven" data-number="7">
+                        <svg style="width:30px;height:30px" viewBox="0 0 24 24" aria-label="hidden">
+                            <path fill="currentColor" d="M11,17L15,9V7H9V9H13L9,17" />
+                        </svg>
+                    </button>
+                    <button class="eight" data-number="8">
+                        <svg style="width:30px;height:30px" viewBox="0 0 24 24" aria-label="hidden">
+                            <path fill="currentColor" d="M11,13H13V15H11M11,9H13V11H11M11,17H13A2,2 0 0,0 15,15V13.5A1.5,1.5 0 0,0 13.5,12A1.5,1.5 0 0,0 15,10.5V9C15,7.89 14.1,7 13,7H11A2,2 0 0,0 9,9V10.5A1.5,1.5 0 0,0 10.5,12A1.5,1.5 0 0,0 9,13.5V15C9,16.11 9.9,17 11,17" />
+                        </svg>
+                    </button>
+                    <button class="nine" data-number="9">
+                        <svg style="width:30px;height:30px" viewBox="0 0 24 24" aria-label="hidden">
+                            <path fill="currentColor" d="M13,17A2,2 0 0,0 15,15V9A2,2 0 0,0 13,7H11A2,2 0 0,0 9,9V11A2,2 0 0,0 11,13H13V15H9V17H13M13,11H11V9H13V11Z" />
+                        </svg>
+                    </button>
+                    <button class="minus" data-operator="-">
+                        <svg style="width:30px;height:30px" viewBox="0 0 24 24" aria-label="hidden">
+                            <path fill="currentColor" class="red" d="M19,13H5V11H19V13Z" />
+                        </svg>
+                    </button>
+                    <button class="four" data-number="4">
+                        <svg style="width:30px;height:30px" viewBox="0 0 24 24" aria-label="hidden">
+                            <path fill="currentColor" d="M9,7V13H13V17H15V7H13V11H11V7H9Z" />
+                        </svg>
+                    </button>
+                    <button class="five" data-number="5">
+                        <svg style="width:30px;height:30px" viewBox="0 0 24 24" aria-label="hidden">
+                            <path fill="currentColor" d="M9,7V13H13V15H9V17H13A2,2 0 0,0 15,15V13A2,2 0 0,0 13,11H11V9H15V7H9Z" />
+                        </svg>
+                    </button>
+                    <button class="six" data-number="6">
+                        <svg style="width:30px;height:30px" viewBox="0 0 24 24" aria-label="hidden">
+                            <path fill="currentColor" d="M11,7A2,2 0 0,0 9,9V15A2,2 0 0,0 11,17H13A2,2 0 0,0 15,15V13A2,2 0 0,0 13,11H11V9H15V7H11M11,13H13V15H11V13Z" />
+                        </svg>
+                    </button>
+                    <button class="add" data-operator="+">
+                        <svg style="width:30px;height:30px" viewBox="0 0 24 24" aria-label="hidden">
+                            <path fill="currentColor" class="red" d="M19,13H13V19H11V13H5V11H11V5H13V11H19V13Z" />
+                        </svg>
+                    </button>
+                    <button class="one" data-number="1">
+                        <svg style="width:30px;height:30px" viewBox="0 0 24 24" aria-label="hidden">
+                            <path fill="currentColor" d="M10,7V9H12V17H14V7H10Z" />
+                        </svg>
+                    </button>
+                    <button class="two" data-number="2">
+                        <svg style="width:30px;height:30px" viewBox="0 0 24 24" aria-label="hidden">
+                            <path fill="currentColor" d="M9,7V9H13V11H11A2,2 0 0,0 9,13V17H11L15,17V15H11V13H13A2,2 0 0,0 15,11V9A2,2 0 0,0 13,7H9Z" />
+                        </svg>
+                    </button>
+                    <button class="three" data-number="3">
+                        <svg style="width:30px;height:30px" viewBox="0 0 24 24" aria-label="hidden">
+                        <path fill="currentColor" d="M15,15V13.5A1.5,1.5 0 0,0 13.5,12A1.5,1.5 0 0,0 15,10.5V9C15,7.89 14.1,7 13,7H9V9H13V11H11V13H13V15H9V17H13A2,2 0 0,0 15,15" />
+                    </svg></button>
+                    <button class="divide" data-operator="÷">
+                        <svg style="width:30px;height:30px" viewBox="0 0 24 24" aria-label="hidden">
+                            <path fill="currentColor" class="red" d="M19,13H5V11H19V13M12,5A2,2 0 0,1 14,7A2,2 0 0,1 12,9A2,2 0 0,1 10,7A2,2 0 0,1 12,5M12,15A2,2 0 0,1 14,17A2,2 0 0,1 12,19A2,2 0 0,1 10,17A2,2 0 0,1 12,15Z" />
+                        </svg>
+                    </button>
+                    <button class="zero" data-number="0">
+                        <svg style="width:30px;height:30px" viewBox="0 0 24 24" aria-label="hidden">
+                            <path fill="currentColor" d="M11,7A2,2 0 0,0 9,9V15A2,2 0 0,0 11,17H13A2,2 0 0,0 15,15V9A2,2 0 0,0 13,7H11M11,9H13V15H11V9Z" />
+                        </svg>
+                    </button>
+                    <button class="decimal" data-decimal=".">
+                        <svg style="width:30px;height:30px" viewBox="0 0 24 24" aria-label="hidden">
+                            <path fill="currentColor" d="M12,10A2,2 0 0,0 10,12C10,13.11 10.9,14 12,14C13.11,14 14,13.11 14,12A2,2 0 0,0 12,10Z" />
+                        </svg>
+                    </button>
+                    <button class="equal" data-operator="=">
+                        <svg style="width:30px;height:30px" viewBox="0 0 24 24" aria-label="hidden">
+                            <path fill="currentColor" d="M19,10H5V8H19V10M19,16H5V14H19V16Z" class="red"/>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </section>
+        
+    </main>
+</body>
+</html>
